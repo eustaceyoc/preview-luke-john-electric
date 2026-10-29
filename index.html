@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Luke &amp; John Electric · Atlanta, GA (concept preview)</title>
+<meta name="description" content="Concept preview of a website for Luke & John Electric, Atlanta, GA. Designed by Eustace Crentsil. Not the business's official site.">
+<meta name="theme-color" content="#FBF8F1">
+<script>document.documentElement.className+=' js'</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--iv:#FBF8F1;--iv2:#F3EEE2;--navy:#14213D;--navy2:#0d1730;--brass:#B08D57;--brassL:#d9c49c;--mut:#5b6377;--line:#e4dccb;--c:'Cormorant Garamond',Georgia,serif;--m:'Manrope',system-ui,sans-serif;--pad:clamp(22px,6vw,110px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--iv);color:var(--navy);font:300 17px/1.7 var(--m);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.lock{overflow:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:4px}
+.concept{background:var(--navy);color:#d6dae6;font:500 12.5px/1.5 var(--m);text-align:center;padding:9px 16px;letter-spacing:.02em}
+.concept b{color:var(--navy);background:var(--brassL);padding:2px 9px;margin-right:8px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase}
+/* header */
+header.top{position:sticky;top:0;z-index:60;transition:background .4s,box-shadow .4s}
+header.top .in{display:flex;justify-content:space-between;align-items:center;padding:30px var(--pad);transition:padding .35s}
+header.top.sm{background:rgba(251,248,241,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--line)}
+header.top.sm .in{padding-top:16px;padding-bottom:16px}
+.mark{font:500 25px/1 var(--c);letter-spacing:.04em;text-decoration:none;white-space:nowrap}
+.mark i{font-style:italic;color:var(--brass);padding:0 3px}
+nav.main{display:flex;gap:clamp(22px,3vw,46px);align-items:center}
+nav.main a{font:500 11px/1 var(--m);letter-spacing:.24em;text-transform:uppercase;text-decoration:none;position:relative;padding:8px 0}
+nav.main a:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+nav.main a:hover:after,nav.main a.on:after{transform:scaleX(1)}
+nav.main a.pill{border:1px solid var(--navy);padding:12px 20px;transition:background .3s,color .3s}
+nav.main a.pill:after{display:none}
+nav.main a.pill:hover{background:var(--navy);color:var(--iv)}
+.burger{display:none;width:44px;height:44px;background:none;border:1px solid var(--navy);cursor:pointer;position:relative}
+.burger i,.burger i:before{position:absolute;left:12px;right:12px;height:1px;background:var(--navy);transition:transform .3s}
+.burger i{top:21px}.burger i:before{content:"";left:0;right:0;top:-6px}
+.burger[aria-expanded=true] i{transform:rotate(45deg)}.burger[aria-expanded=true] i:before{transform:translateY(6px) rotate(-90deg)}
+.mnav{position:fixed;inset:0;z-index:55;background:var(--iv);padding:130px var(--pad) 40px;display:flex;flex-direction:column;justify-content:space-between;visibility:hidden;opacity:0;transition:opacity .4s,visibility .4s}
+.mnav.open{visibility:visible;opacity:1}
+.mnav a.l{display:block;font:300 clamp(40px,12vw,64px)/1.1 var(--c);text-decoration:none;padding:10px 0;border-bottom:1px solid var(--line)}
+.mnav a.l em{color:var(--brass);font-size:.4em;font-family:var(--m);font-style:normal;letter-spacing:.2em;margin-right:14px;vertical-align:middle}
+.mnav p{font:500 11px/1.6 var(--m);letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+/* shared */
+.eyebrow{display:flex;align-items:center;gap:16px;font:600 11px/1 var(--m);letter-spacing:.3em;text-transform:uppercase;color:var(--brass)}
+.eyebrow:before{content:"";width:44px;height:1px;background:var(--brass)}
+h1,h2,h3{font-family:var(--c);font-weight:300}
+h2{font-size:clamp(40px,5.4vw,84px);line-height:1.02;letter-spacing:-.01em}
+em{font-style:italic;color:var(--brass)}
+.cta{display:inline-flex;align-items:center;gap:16px;font:600 11.5px/1 var(--m);letter-spacing:.24em;text-transform:uppercase;text-decoration:none;color:var(--iv);background:var(--navy);padding:21px 32px;border:1px solid var(--navy);cursor:pointer;transition:background .35s,color .35s,gap .35s,border-color .35s}
+.cta:hover{background:var(--brass);border-color:var(--brass);gap:24px}
+.cta.o{background:transparent;color:var(--navy)}.cta.o:hover{background:var(--navy);color:var(--iv);border-color:var(--navy)}
+section{padding:clamp(80px,11vw,170px) var(--pad)}
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(20px,4vw,70px);align-items:center;padding:clamp(20px,3vw,50px) var(--pad) 0;min-height:min(780px,calc(100vh - 120px))}
+.hero .tx{padding:30px 0 70px}
+.hero h1{font-size:clamp(54px,8vw,132px);line-height:.94;letter-spacing:-.02em;margin:34px 0 34px}
+.hero .l{font-size:clamp(17px,1.35vw,19px);max-width:34em;color:#3a4560}
+.hero .cta{margin-top:44px}
+.fix{position:relative;height:100%;min-height:520px;display:flex;justify-content:center}
+.fix svg{height:min(78vh,720px);width:auto;overflow:visible}
+.ln{fill:none;stroke:var(--navy);stroke-width:1.3;vector-effect:non-scaling-stroke}
+.br{fill:none;stroke:var(--brass);stroke-width:1.5;vector-effect:non-scaling-stroke}
+.draw{stroke-dasharray:1;stroke-dashoffset:0}
+.js .draw{stroke-dashoffset:1;animation:draw 2.4s .3s cubic-bezier(.5,0,.2,1) forwards}
+.js .draw.b{animation-delay:.7s}.js .draw.c{animation-delay:1.1s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.glow{opacity:.0;transition:opacity 1.2s ease}
+.on-light .glow,.glow{opacity:1}
+.js .glow{opacity:0;animation:glowin 1.8s 1.8s ease forwards}
+@keyframes glowin{to{opacity:1}}
+.fix.off .glow{animation:none;opacity:0}
+.sw{position:absolute;right:0;bottom:6px;font:600 10.5px/1 var(--m);letter-spacing:.22em;text-transform:uppercase;background:none;border:1px solid var(--line);color:var(--mut);padding:12px 16px;cursor:pointer;display:flex;align-items:center;gap:10px;transition:border-color .3s,color .3s}
+.sw:hover{border-color:var(--brass);color:var(--navy)}
+.sw i{width:8px;height:8px;border-radius:50%;background:var(--brass);box-shadow:0 0 10px var(--brass);transition:background .3s,box-shadow .3s}
+.fix.off+* .sw i,.sw[aria-pressed=false] i{background:#c9c4b6;box-shadow:none}
+.pt{will-change:transform}
+.ledger{margin:0 var(--pad);display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--navy)}
+.ledger div{padding:26px 24px 30px 0;font:500 11px/1.6 var(--m);letter-spacing:.22em;text-transform:uppercase;color:var(--mut)}
+.ledger div+div{padding-left:28px;border-left:1px solid var(--line)}
+.ledger b{display:block;font:300 clamp(24px,2.4vw,34px)/1.2 var(--c);letter-spacing:0;text-transform:none;color:var(--navy);margin-top:4px}
+/* services tabs */
+.sh{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,6vw,100px);align-items:end;margin-bottom:clamp(44px,6vw,90px)}
+.sh p{color:var(--mut);font-size:16px;max-width:40em}
+.tabs{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,6vw,110px);border-top:1px solid var(--navy)}
+.tl{display:flex;flex-direction:column}
+.tl button{background:none;border:0;border-bottom:1px solid var(--line);text-align:left;cursor:pointer;padding:30px 0;display:flex;gap:22px;align-items:baseline;font:300 clamp(30px,3.3vw,50px)/1.1 var(--c);color:#8c93a6;transition:color .3s,padding .4s}
+.tl button span{font:italic 400 22px var(--c);color:var(--brass);min-width:34px}
+.tl button:hover{color:var(--navy)}
+.tl button[aria-selected=true]{color:var(--navy);padding-left:18px}
+.tp{padding:34px 0;min-height:420px}
+.tp[hidden]{display:none}
+.tp.on{animation:fadeup .6s ease both}
+@keyframes fadeup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.tp .num{font:italic 300 clamp(80px,12vw,180px)/.8 var(--c);color:var(--brassL);margin-bottom:10px}
+.tp h3{font-size:clamp(32px,3.4vw,52px);line-height:1.1;margin-bottom:14px}
+.tp>p{color:#3a4560;max-width:36em}
+.tp ul{list-style:none;margin-top:30px;border-top:1px solid var(--line)}
+.tp li{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid var(--line);font-size:16.5px;transition:padding .3s,background .3s}
+.tp li:hover{padding-left:12px}
+.tp li span{font:500 10.5px/1.9 var(--m);letter-spacing:.2em;text-transform:uppercase;color:var(--brass);white-space:nowrap}
+.tp .src{display:block;margin-top:22px;font:500 11px/1.5 var(--m);letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+.tp .big2{font:italic 300 clamp(30px,3.4vw,52px)/1.25 var(--c);margin-top:6px}
+/* license */
+.lic{background:var(--navy);color:var(--iv);text-align:center;position:relative;overflow:hidden}
+.lic:before,.lic:after{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,rgba(217,196,156,.35),transparent)}
+.lic:after{left:calc(50% + 140px);opacity:.5}.lic:before{left:calc(50% - 140px);opacity:.5}
+.lic>*{position:relative;z-index:1}
+.lic .eyebrow{justify-content:center;color:var(--brassL)}.lic .eyebrow:before{background:var(--brassL)}
+.lic .num{font:300 clamp(54px,10vw,160px)/1 var(--c);letter-spacing:.06em;margin:34px 0 44px;color:var(--brassL);font-variant-numeric:lining-nums}
+.lic .num span{font-size:.14em;letter-spacing:.34em;display:block;color:var(--iv);opacity:.7;font-family:var(--m);margin-bottom:18px;font-weight:400;text-transform:uppercase}
+.lic p{max-width:52ch;margin:0 auto;color:#c9cedb;font-size:16px}
+.lic .pl{display:inline-flex;gap:26px;margin-top:44px;font:500 11.5px/1.6 var(--m);letter-spacing:.22em;text-transform:uppercase;border-top:1px solid rgba(255,255,255,.2);border-bottom:1px solid rgba(255,255,255,.2);padding:18px 26px;flex-wrap:wrap;justify-content:center}
+.lic .pl i{font-style:normal;color:var(--brassL)}
+/* words */
+.slides{display:grid;grid-template-columns:.3fr 1.7fr;gap:clamp(24px,5vw,90px);align-items:start}
+.sn{font:italic 300 clamp(70px,9vw,150px)/.8 var(--c);color:var(--brassL)}
+.sn small{display:block;font:500 11px/1 var(--m);letter-spacing:.24em;text-transform:uppercase;color:var(--mut);margin-top:16px;font-style:normal}
+.stage{display:grid;overflow:hidden}
+.sl{grid-area:1/1;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .7s,transform .7s,visibility .7s}
+.sl.on{opacity:1;visibility:visible;transform:none}
+.sl q{display:block;font:300 clamp(28px,3.6vw,56px)/1.22 var(--c);quotes:"“" "”";font-style:italic}
+.sl.sm q{font-size:clamp(26px,3vw,46px)}
+.cite{display:block;margin-top:28px;font:600 11px/1.5 var(--m);letter-spacing:.24em;text-transform:uppercase;color:var(--brass)}
+.sctl{display:flex;align-items:center;gap:16px;margin-top:38px}
+.sctl button.a{width:52px;height:52px;border-radius:50%;border:1px solid var(--navy);background:transparent;cursor:pointer;font-size:18px;transition:background .3s,color .3s}
+.sctl button.a:hover{background:var(--navy);color:var(--iv)}
+.sbar{flex:1;max-width:220px;height:1px;background:var(--line);position:relative;margin-left:10px}
+.sbar i{position:absolute;left:0;top:0;height:1px;width:100%;background:var(--brass);transform:scaleX(0);transform-origin:left}
+.meta{display:flex;gap:clamp(24px,5vw,70px);flex-wrap:wrap;margin-top:clamp(56px,7vw,100px);padding-top:30px;border-top:1px solid var(--line)}
+.meta div{font:500 11px/1.5 var(--m);letter-spacing:.22em;text-transform:uppercase;color:var(--mut)}
+.meta b{display:block;font:300 clamp(48px,5.4vw,84px)/1.05 var(--c);letter-spacing:0;text-transform:none;color:var(--navy);font-variant-numeric:lining-nums}
+/* consult */
+.req{background:var(--iv2)}
+.rg{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,7vw,120px);align-items:start}
+.rg .em2{margin-top:34px;font-size:15px;color:var(--mut)}
+.rg .em2 a{color:var(--navy);border-bottom:1px solid var(--brass);text-decoration:none;font-weight:500;overflow-wrap:anywhere}
+form{display:grid;gap:34px}
+.fld{position:relative}
+label{font:600 10.5px/1 var(--m);letter-spacing:.26em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:6px}
+input,textarea,select{font:300 18px var(--m);border:0;border-bottom:1px solid var(--navy);background:transparent;padding:12px 0;width:100%;color:var(--navy);border-radius:0;transition:border-color .3s,box-shadow .3s}
+select{appearance:none;-webkit-appearance:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%2314213D'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E") right 4px center no-repeat}
+textarea{min-height:100px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:0;border-color:var(--brass);box-shadow:0 1px 0 var(--brass)}
+.fld.bad input,.fld.bad textarea,.fld.bad select{border-color:#9b2c2c}
+.err{display:none;font:500 12.5px var(--m);color:#9b2c2c;margin-top:8px}
+.fld.bad .err{display:block}
+form .cta{justify-self:start}
+.demo{font-size:13px;color:var(--mut)}
+#ok{display:none;background:var(--navy);color:var(--iv);padding:16px 20px;font-size:14.5px}
+footer{padding:60px var(--pad) 120px;border-top:1px solid var(--line);font-size:14px;color:var(--mut)}
+footer .mark{display:block;color:var(--navy);margin-bottom:16px}
+footer p{max-width:76ch;margin-top:10px}
+.disc{margin-top:22px;border:1px solid var(--brass);padding:14px 18px;color:var(--navy);font-weight:500;font-size:13.5px;max-width:76ch;background:#fff6d6}
+.sticky{display:none}
+.js .rv{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+@media (max-width:900px){
+ nav.main{display:none}.burger{display:block}
+ header.top .in{padding:20px var(--pad)}
+ .hero{grid-template-columns:1fr;min-height:0}
+ .fix{min-height:0;height:auto;order:-1;margin-top:10px}.fix svg{height:230px}
+ .sw{position:static;align-self:flex-end;margin-left:20px}
+ .fix{align-items:flex-end}
+ .hero .tx{padding:10px 0 56px}
+ .ledger{grid-template-columns:1fr}.ledger div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+ .sh,.tabs,.slides,.rg{grid-template-columns:1fr}
+ .tl{flex-direction:row;overflow-x:auto;border-bottom:1px solid var(--line);margin-bottom:6px;scrollbar-width:none}.tl::-webkit-scrollbar{display:none}
+ .tl button{border:0;padding:20px 22px 20px 0;flex:0 0 auto;font-size:28px}.tl button[aria-selected=true]{padding-left:0;box-shadow:inset 0 -2px 0 var(--brass)}
+ .tl button span{display:none}
+ .tp{min-height:0}
+ .sn{display:none}
+ .lic:before,.lic:after{display:none}
+ .sticky{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:70;opacity:0;pointer-events:none;transform:translateY(14px);transition:.25s}
+ .sticky.on{opacity:1;pointer-events:auto;transform:none}
+ .sticky a{display:block;text-align:center;background:var(--navy);color:var(--iv);font:600 11.5px/1 var(--m);letter-spacing:.24em;text-transform:uppercase;padding:20px;text-decoration:none;border:1px solid var(--brass)}
+}
+@media (max-width:520px){.concept{text-align:left}.cta{width:100%;justify-content:space-between}.tp li{flex-direction:column;gap:2px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}.js .draw{stroke-dashoffset:0}.js .glow{opacity:1}}
+</style>
+</head>
+<body>
+<div class="concept" role="note"><b>Concept preview</b>Designed by Eustace Crentsil for Luke &amp; John Electric. Not affiliated with or published by Luke &amp; John Electric.</div>
+
+<header class="top" id="hd">
+ <div class="in">
+  <a class="mark" href="#top">Luke <i>&amp;</i> John Electric</a>
+  <nav class="main" aria-label="Sections"><a href="#services">Services</a><a href="#license">License</a><a href="#words">Clients</a><a class="pill" href="#consult">Consultation</a></nav>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><i></i></button>
+ </div>
+</header>
+<div class="mnav" id="mnav" aria-hidden="true">
+ <div>
+  <a class="l" href="#services"><em>I</em>Services</a>
+  <a class="l" href="#license"><em>II</em>License</a>
+  <a class="l" href="#words"><em>III</em>Clients</a>
+  <a class="l" href="#consult"><em>IV</em>Consultation</a>
+ </div>
+ <p>Family electrical · Atlanta, Georgia</p>
+</div>
+
+<main id="top">
+<div class="hero">
+ <div class="tx">
+  <div class="eyebrow rv">Family electrical · Atlanta, Georgia</div>
+  <h1 class="rv" style="--d:.1s">Residential electrical, <em>done with care.</em></h1>
+  <p class="l rv" style="--d:.2s">A family electrical business. Call us to repair, install, and upgrade anything electrical in your home.</p>
+  <a class="cta rv" style="--d:.3s" href="#consult">Request a consultation <span aria-hidden="true">→</span></a>
+ </div>
+ <div class="fix" id="fix">
+  <div class="pt" id="pt" aria-hidden="true">
+  <svg viewBox="0 0 400 780" focusable="false">
+   <path class="ln draw" pathLength="1" d="M200 0V210"/>
+   <path class="ln draw" pathLength="1" d="M176 0H224M184 0V10H216V0"/>
+   <path class="ln draw b" pathLength="1" d="M196 210H204V232H196Z"/>
+   <path class="ln draw b" pathLength="1" d="M96 400C96 300 150 238 200 232C250 238 304 300 304 400Z"/>
+   <path class="ln draw b" pathLength="1" d="M130 400C130 330 160 272 200 250M270 400C270 330 240 272 200 250"/>
+   <path class="br draw c" pathLength="1" d="M86 400H314"/>
+   <path class="br draw c" pathLength="1" d="M152 414H248"/>
+   <g class="glow">
+    <ellipse cx="200" cy="430" rx="13" ry="17" class="br" style="fill:#f1e2c0"/>
+    <path class="br" d="M190 412H210"/>
+    <path d="M200 450L120 760H280Z" style="fill:url(#gl);stroke:none"/>
+   </g>
+   <defs><linearGradient id="gl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B08D57" stop-opacity=".28"/><stop offset="1" stop-color="#B08D57" stop-opacity="0"/></linearGradient></defs>
+  </svg>
+  </div>
+  <button class="sw" id="sw" aria-pressed="true" aria-label="Toggle the lamp light"><i></i><span id="swt">Light on</span></button>
+ </div>
+</div>
+<div class="ledger rv">
+ <div>Business<b>Family-run</b></div>
+ <div>Based in<b>Atlanta, Georgia</b></div>
+ <div>On Nextdoor<b>Neighborhood Fave <span style="white-space:nowrap">2021 – 2025</span></b></div>
+</div>
+
+<section id="services">
+ <div class="sh"><h2 class="rv">Two things <em>done well.</em></h2><p class="rv" style="--d:.1s">From the business’s Nextdoor description, “repair, install, and upgrade anything electrical in your home”, and what neighbors have said about the work.</p></div>
+ <div class="tabs rv">
+  <div class="tl" role="tablist" aria-label="Services">
+   <button role="tab" id="t0" aria-selected="true" aria-controls="p0"><span>i.</span>Lighting</button>
+   <button role="tab" id="t1" aria-selected="false" aria-controls="p1"><span>ii.</span>Panel upgrades</button>
+   <button role="tab" id="t2" aria-selected="false" aria-controls="p2"><span>iii.</span>Anything electrical</button>
+  </div>
+  <div>
+   <div class="tp on" id="p0" role="tabpanel" aria-labelledby="t0"><div class="num">i.</div><h3>Lighting</h3><p>Fixtures, fans and recessed lighting installed in the home.</p>
+    <ul><li>Ceiling fixtures &amp; ceiling fans <span>Nextdoor, 2024</span></li><li>Outlet installation <span>Nextdoor, 2024</span></li><li>Recessed lighting installation <span>Google · 5 mentions</span></li></ul></div>
+   <div class="tp" id="p1" role="tabpanel" aria-labelledby="t1" hidden><div class="num">ii.</div><h3>Panel upgrades</h3><p>Replacing an outdated electrical panel, with the circuits identified afterward.</p>
+    <ul><li>Panel replacement <span>Nextdoor, 2025</span></li><li>Circuits labeled after the work <span>Nextdoor, 2025</span></li><li>Work scheduled within a week <span>Nextdoor, 2025</span></li></ul></div>
+   <div class="tp" id="p2" role="tabpanel" aria-labelledby="t2" hidden><div class="num">iii.</div><h3>The rest of the house</h3><p>The business describes its work in one line:</p>
+    <p class="big2">“Repair, install, and upgrade anything electrical in your home.”</p><span class="src">Luke &amp; John Electric, on Nextdoor</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="license" class="lic">
+ <div class="eyebrow rv">Licensed &amp; insured</div>
+ <div class="num rv" style="--d:.1s"><span>License number</span>EN217337</div>
+ <p class="rv" style="--d:.2s">The business’s Nextdoor page describes it as “licensed and insured,” and lists this license number.</p>
+ <div class="pl rv" style="--d:.3s"><span>Family business</span><i>·</i><span>Atlanta, GA</span><i>·</i><span>Neighborhood Fave 2021 – 2025</span></div>
+</section>
+
+<section id="words">
+ <div class="sh"><h2 class="rv">Neighbors’ <em>words.</em></h2><p class="rv" style="--d:.1s">Words from Atlanta neighbors, quoted from Nextdoor with names shortened to initials.</p></div>
+ <div class="slides rv">
+  <div class="sn"><span id="snum">01</span><small>of 03</small></div>
+  <div>
+   <div class="stage" aria-live="polite">
+    <div class="sl on"><q>…everything was explained in a straightforward way, and I felt confident the replacement would be a breeze with them doing the work. Their quote was also a fraction of the cost.</q><span class="cite">R.T. · Nextdoor · March 2025</span></div>
+    <div class="sl sm"><q>They were prompt, professional, thoughtful … and thorough. We’re thrilled with the work they did.</q><span class="cite">J.P. · Nextdoor · July 2024</span></div>
+    <div class="sl sm"><q>They left the house in better condition than they found it.</q><span class="cite">R.T. · Nextdoor · March 2025</span></div>
+   </div>
+   <div class="sctl"><button class="a" id="sp" aria-label="Previous quote">←</button><button class="a" id="sn" aria-label="Next quote">→</button><div class="sbar"><i id="sbar"></i></div></div>
+  </div>
+ </div>
+ <div class="meta rv"><div><b><span data-count="218">218</span></b>Nextdoor faves</div><div><b><span data-count="5">5</span>×</b>Neighborhood Fave<br>2021 – 2025</div><div><b><span data-count="4.9" data-dec="1">4.9</span></b>Google · 67 reviews</div></div>
+</section>
+
+<section id="consult" class="req">
+ <div class="rg">
+  <div>
+   <div class="eyebrow rv">Consultation</div>
+   <h2 class="rv" style="margin-top:30px;--d:.1s">Tell us about <em>your home.</em></h2>
+   <p class="em2 rv" style="--d:.2s">Prefer email? <a href="mailto:lukeandjohnelectric2@gmail.com">lukeandjohnelectric2@gmail.com</a></p>
+  </div>
+  <form id="f" class="rv" novalidate>
+   <div class="fld"><label for="n">Your name</label><input id="n" autocomplete="name"><div class="err">Please enter your name.</div></div>
+   <div class="fld"><label for="e">Email</label><input id="e" type="email" autocomplete="email"><div class="err">Please enter a valid email address.</div></div>
+   <div class="fld"><label for="pj">Project</label><select id="pj"><option value="">Choose one</option><option>Lighting</option><option>Panel upgrade</option><option>Something else electrical</option></select><div class="err">Please choose a project type.</div></div>
+   <div class="fld"><label for="d">Tell us a little more</label><textarea id="d"></textarea></div>
+   <button class="cta" type="submit">Send request <span aria-hidden="true">→</span></button>
+   <p class="demo">Demo form only. Nothing is sent. To reach Luke &amp; John Electric, email lukeandjohnelectric2@gmail.com.</p>
+   <div id="ok" role="status">Thanks! This is a concept preview, so nothing was sent. Please email lukeandjohnelectric2@gmail.com.</div>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer>
+ <a class="mark" href="#top">Luke <i>&amp;</i> John Electric</a>
+ <p>A concept website for Luke &amp; John Electric, Atlanta, GA. Business details are taken from the business’s public Nextdoor page and Google listing as of October 2026. License number as shown on the Nextdoor page. Reviews are quoted from Nextdoor with names shortened to initials. No photos or logos are used. Phone numbers and hours are left off because the public listings differ. Set in Cormorant Garamond and Manrope.</p>
+ <div class="disc">Concept preview designed by Eustace Crentsil for Luke &amp; John Electric. Not affiliated with or published by Luke &amp; John Electric. The form is a demo and sends nothing.</div>
+</footer>
+<div class="sticky" id="sticky"><a href="#consult">Request a consultation</a></div>
+
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var $=function(s,c){return (c||document).querySelector(s)},$$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var hd=$('#hd'),sticky=$('#sticky'),pt=$('#pt'),tick=false,links=$$('nav.main a:not(.pill)'),secs=['services','license','words'].map(function(i){return $('#'+i)});
+function onScroll(){
+ var y=scrollY;hd.classList.toggle('sm',y>40);sticky.classList.toggle('on',y>600);
+ if(!RM&&innerWidth>900&&y<1000)pt.style.transform='translateY('+(y*.08).toFixed(1)+'px)';
+ var cur=-1;secs.forEach(function(s,i){if(s.getBoundingClientRect().top<innerHeight*.4)cur=i});links.forEach(function(a,i){a.classList.toggle('on',i===cur)});tick=false}
+addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+/* menu */
+var b=$('#burger'),m=$('#mnav');
+function menu(o){b.setAttribute('aria-expanded',o);m.classList.toggle('open',o);m.setAttribute('aria-hidden',!o);document.body.classList.toggle('lock',o)}
+b.addEventListener('click',function(){menu(b.getAttribute('aria-expanded')!=='true')});
+$$('a',m).forEach(function(a){a.addEventListener('click',function(){menu(false)})});
+addEventListener('keydown',function(e){if(e.key==='Escape')menu(false)});
+addEventListener('resize',function(){if(innerWidth>900)menu(false)});
+/* reveal + counters */
+var rv=$$('.rv');
+if('IntersectionObserver' in window&&!RM){
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -5% 0px'});rv.forEach(function(el){io.observe(el)});
+ var co=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){co.unobserve(e.target);var el=e.target,to=+el.dataset.count,dec=+el.dataset.dec||0,t0=null;el.textContent=(0).toFixed(dec);(function st(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1500);el.textContent=(to*(1-Math.pow(1-p,3))).toFixed(dec);if(p<1)requestAnimationFrame(st)})(performance.now())}})},{threshold:.6});$$('[data-count]').forEach(function(el){co.observe(el)});
+}else rv.forEach(function(el){el.classList.add('in')});
+/* lamp switch */
+var sw=$('#sw'),fix=$('#fix');
+sw.addEventListener('click',function(){var on=sw.getAttribute('aria-pressed')!=='true';sw.setAttribute('aria-pressed',on);fix.classList.toggle('off',!on);$('#swt').textContent=on?'Light on':'Light off';$('.glow').style.opacity=on?1:0});
+/* tabs */
+var tabs=$$('[role=tab]'),panels=$$('.tp');
+function sel(i){tabs.forEach(function(t,k){t.setAttribute('aria-selected',k===i);t.tabIndex=k===i?0:-1});panels.forEach(function(p,k){p.hidden=k!==i;p.classList.toggle('on',k===i)})}
+tabs.forEach(function(t,i){t.addEventListener('click',function(){sel(i)});t.addEventListener('keydown',function(e){var n=e.key==='ArrowRight'||e.key==='ArrowDown'?1:e.key==='ArrowLeft'||e.key==='ArrowUp'?-1:0;if(n){e.preventDefault();var k=(i+n+tabs.length)%tabs.length;sel(k);tabs[k].focus()}})});
+/* quotes */
+var ss=$$('.sl'),si=0,bar=$('#sbar'),sstart=performance.now(),spaused=RM,SD=9000;
+function go(i){si=(i+ss.length)%ss.length;ss.forEach(function(s,k){s.classList.toggle('on',k===si)});$('#snum').textContent='0'+(si+1);bar.style.transform='scaleX(0)';sstart=performance.now()}
+$('#sp').addEventListener('click',function(){go(si-1)});$('#sn').addEventListener('click',function(){go(si+1)});
+var sl=$('.slides');sl.addEventListener('mouseenter',function(){if(!RM)spaused=true});sl.addEventListener('mouseleave',function(){if(!RM){spaused=false;sstart=performance.now()}});sl.addEventListener('focusin',function(){spaused=true});
+if(!RM)(function loop(t){if(!spaused){var p=Math.min(1,(t-sstart)/SD);bar.style.transform='scaleX('+p+')';if(p>=1)go(si+1)}requestAnimationFrame(loop)})(performance.now());
+/* form */
+var form=$('#f'),fields=$$('#n,#e,#pj');
+function chk(el){var v=el.value.trim(),ok=el.id==='e'?/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v):el.id==='pj'?v!=='':v.length>1;el.parentNode.classList.toggle('bad',!ok);el.setAttribute('aria-invalid',!ok);return ok}
+fields.forEach(function(el){el.addEventListener('blur',function(){if(el.value||el.parentNode.classList.contains('bad'))chk(el)});el.addEventListener('input',function(){if(el.parentNode.classList.contains('bad'))chk(el)});el.addEventListener('change',function(){if(el.parentNode.classList.contains('bad'))chk(el)})});
+form.addEventListener('submit',function(e){e.preventDefault();var r=fields.map(chk),i=r.indexOf(false);if(i>-1){fields[i].focus();$('#ok').style.display='none';return}$('#ok').style.display='block';form.reset()});
+})();
+</script>
+</body>
+</html>
